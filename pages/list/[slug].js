@@ -1,9 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import marked from 'marked'
 import Link from 'next/link'
-import Item from '../../components/Item'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {fas} from '@fortawesome/free-solid-svg-icons'
@@ -108,7 +106,7 @@ export default function PostPage({
                   </CardText>
                 </Col>
               </Row>
-              <Row>
+              {parseInt(item.quantidade) > 0 ? <Row>
                 <div className="col">
                   <CardTitle className="list-title text-uppercase mb-0">
                   Quantidade:
@@ -119,8 +117,8 @@ export default function PostPage({
                     {item.quantidade}
                   </CardText>
                 </Col>
-              </Row>
-              <Row>
+              </Row> :''}
+              {parseInt(item.precoUnitario) > 0 ? <Row>
                 <div className="col">
                   <CardTitle className="list-title text-uppercase mb-0">
                     Preço Unitário:
@@ -128,10 +126,10 @@ export default function PostPage({
                 </div>
                 <Col className="col-auto">
                 <CardText className="list-text text-uppercase mb-0">
-               R$&nbsp;{item.precoUnitario}
+               R$&nbsp; {parseFloat(item.precoUnitario).toFixed(2).replace('.',',')}
                   </CardText>
                 </Col>
-              </Row>
+              </Row> :''}
               </ListGroupItem>
              ))}        
             </ListGroup>

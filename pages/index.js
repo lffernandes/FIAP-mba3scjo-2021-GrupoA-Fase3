@@ -58,7 +58,8 @@ export async function getStaticProps() {
   })
   return {
     props: {
-      lists: lists.sort(),
+      lists: lists.sort(function(a,b) {return Number(new Date(a.dataCompra)) - Number(new Date(b.dataCompra));
+      })
     },
   }
 }

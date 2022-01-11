@@ -53,6 +53,10 @@ header a {
   color: #2855ae;
   font-weight: bold;
 }
+.list-desativado {
+  color: #ced4da;
+  font-weight: bold;
+}
 
 .container {
   max-width: 768px;

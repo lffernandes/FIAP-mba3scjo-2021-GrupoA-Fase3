@@ -60,18 +60,23 @@ export default function List ({ list }) {
                   </CardText>
                 </Col>
               </Row> :''}
-              <Row>
+               <Row>
                 <div className="col">
                   <CardTitle className="list-title text-uppercase mb-0">
                     Valor Total: 
                   </CardTitle>
                 </div>
                 <Col className="col-auto">
+                {list.frontmatter.total != null || list.frontmatter.total == 0 ? 
+                
                 <CardText className="list-text text-uppercase mb-0">
-                {list.frontmatter.total}
-                  </CardText>
+                R$&nbsp;{parseFloat(list.frontmatter.total).toFixed(2).replace('.',',')}
+                  </CardText> :
+                  <CardText className="list-desativado text-uppercase mb-0">
+                    Não previsto
+                  </CardText>}
                 </Col>
-              </Row>
+              </Row> 
             </CardBody>
             <Link href={`/list/${list.slug}`}> 
               <Button className="mb-3 text-uppercase" color="primary" type="button">
