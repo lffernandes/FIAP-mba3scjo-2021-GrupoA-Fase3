@@ -55,7 +55,7 @@ $ npm run dev
 
 ---
 
-## 🦸 Autor
+## 🦸 Autores
 
 
  <sub><b>Luiz Felipe M. Fernandes</b></sub></a> <a href="https://www.linkedin.com/in/luizffernandes/" title="lzfrnds">🚀</a>
