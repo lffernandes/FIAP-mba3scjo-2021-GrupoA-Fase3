@@ -1,0 +1,241 @@
+{"lists": [
+	{"id": 1,
+		"nome": "Alimentos",
+		 "dataCompra": "14/01/22",
+		 "repetir": true, 
+		 "periodo": "Semanal", 
+		 "total": 150,     
+		 "itens": [{
+		"id": 1,
+		"nome": "Manteiga",
+		"quantidade": 1,
+		"precoUnitario": 12
+		},
+		{
+		"id": 2,
+		"nome": "Ovos duzia",
+		"quantidade": 2,
+		"precoUnitario": 4
+		},
+		{
+		"id": 3,
+		"nome": "Iogurte",
+		"quantidade": 2,
+		"precoUnitario": 0
+		},
+		{
+		"id": 4,
+		"nome": "Suco de Laranja Natural One 2L",
+		"quantidade": 2,
+		"precoUnitario": "12.90"
+		},{
+		"id": 5,
+		"nome": "Hortaliças",
+		"quantidade": 0,
+		 "precoUnitario": 0
+		},{
+		"id": 6,
+		"nome": "Frutas",
+		"quantidade": 0,
+		"precoUnitario": 0}
+		]},
+	
+	{"id": 2,
+		"nome": "Higiene Pessoal",
+		"dataCompra": "31/01/22",
+		"repetir": true,
+		"periodo": "Mensal",
+		"total": 150,
+		"itens": [{
+		"id": 1,
+		"nome": "Algodão Apolo 100G",
+		"quantidade": 2,
+		"precoUnitario": "14,00"
+		},
+		{
+		"id": 2,
+		"nome": "Barbeador Descartável Gilette",
+		"quantidade": 1,
+		"precoUnitario": "17,00"
+		},
+		{
+		"id": 3,
+		"nome": "Creme de barbear",
+		"quantidade": 1,
+		"precoUnitario": 0
+		},
+		{
+		"id": 4,
+		"nome": "Creme dental Oral B 70g",
+		"quantidade": 3,
+		"precoUnitario": "1,80"
+		},
+		{
+		"id": 5,
+		"nome": "Escova Dental Oral-b Advanced 5 2uni",
+		"quantidade": 1,
+		"precoUnitario": "19,90"
+		},
+		{
+		"id": 6,
+		"nome": "Fio dental",
+		"quantidade": 1,
+		"precoUnitario": "10,00"
+		},
+		{
+		"id": 7,
+		"nome": "Hastes flexíveis Cotonete 150 uni",
+		"quantidade": 1,
+		"precoUnitario": "10,00"
+		},
+		{
+		"id": 8,
+		"nome": "Sabonete protex",
+		"quantidade": 0,
+		"precoUnitario": "11,69"
+		},
+		{
+		"id": 9,
+		"nome": "Shampoo Nivea men",
+		"quantidade": 1,
+		"precoUnitario": "25,90"}
+		]},
+	{"id": 3,
+		"nome": "Limpeza",
+		"dataCompra": "31/01/22",
+		"repetir": true, 
+		"periodo": "Mensal",
+		"total": null,
+		"itens": [{
+		"nome": "Água Sanitária Suprema 5 Litros",
+		"quantidade": "1",
+		"precoUnitario": "5,32"
+		},
+		{
+		"id": 1,
+		"nome": "Álcool Em Gel Cristal 1,0kg Asseptgel",
+		"quantidade": 1,
+		"precoUnitario": "26,40"
+		},
+		{
+		"id": 2,
+		"nome": "Downy Brisa de Verão Amaciante Concentrado 3 L",
+		"quantidade": 1,
+		"precoUnitario": "37,03"
+		},
+		{
+		"id": 3,
+		"nome": "Desinfetante Eucalipto 5 L Sanol",
+		"quantidade": 1,
+		"precoUnitario": "18,62"
+		},
+		{
+		"id": 4,
+		"nome": "Detergente Para Lava Louças Finish Com 30 Tabletes",
+		"quantidade": 1,
+		"precoUnitario": "35,01"
+		},
+		{
+		"id": 5,
+		"nome": "Detergente Líquido Ypê Clear 500ml Com 6",
+		"quantidade": 1,
+		"precoUnitario": "11,28"
+		},
+		{
+		"id": 6,
+		"nome": "Esponja de Aço Bombril 60g",
+		"quantidade": 2,
+		"precoUnitario": "1,99"
+		},
+		{
+		"id": 7,
+		"nome": "Esponja de prato Scotch Brite com 4 unid",
+		"quantidade": 1,
+		"precoUnitario": "7,99"
+		},{
+		"id": 8,
+		"nome": "Omo em Pó Lavagem Perfeita Sanitiza & Higieniza 1,6kg",
+		"quantidade": 1,
+		"precoUnitario": "19,99"}
+		]},
+	{"id": 4,
+		"nome": "Utilidades",
+		"dataCompra": "20/01/22",
+		"repetir": false,
+		"periodo": "",
+		"total": null,
+		"itens": [{
+		"id": 1,
+		"nome": "Fósforo",
+		"quantidade": 1,
+		"precoUnitario": 0
+		},
+		{
+		"id": 2,
+		"nome": "Guardanapo Folha Simples Kitchen - 50",
+		"quantidade": 1,
+		"precoUnitario": "1.90"
+		},
+		{
+		"id": 3,
+		"nome": "Lampada Led 9,5W",
+		"quantidade": 1,
+		"precoUnitario": 0
+		},
+		{
+		"id": 4,
+		"nome": "Papel Alumínio 30Cm X 7,5M - Bompack",
+		"quantidade": 1,
+		"precoUnitario": "2,80"
+		},
+		{
+		"id": 5,
+		"nome": "Plastico Para Alimentos Filme Pvc 28cmx30m Billa",
+		"quantidade": 1,
+		"precoUnitario": "8,00"
+		}]
+	},
+	{"id": 5,
+		"nome": "Alimentos",
+		"dataCompra": "31/01/22",
+		"repetir": true,
+		"periodo": "Mensal",
+		"total": 150,
+		"itens": [{
+		"id": 1,
+		"nome": "Arroz",
+		"quantidade": 0,
+		"precoUnitario": 0
+		},
+		{
+		"id": 2,
+		"nome": "Feijão",
+		"quantidade": 0,
+		"precoUnitario": 0
+		},
+		{
+		"id": 3,
+		"nome": "Óleo",
+		"quantidade": 0,
+		"precoUnitario": 0
+		},
+		{
+		"id": 4,
+		"nome": "Carnes",
+		"quantidade": 0,
+		"precoUnitario": 0
+		},
+		{
+		"id": 5,
+		"nome": "Macarrão",
+		"quantidade": 0,
+		"precoUnitario": 0
+		},
+		{
+		"id": 6,
+		"nome": "Temperos",
+		"quantidade": 0,
+		"precoUnitario": 0
+		}]}
+		
+	] }

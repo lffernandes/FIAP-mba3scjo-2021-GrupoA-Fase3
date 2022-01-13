@@ -1,22 +1,17 @@
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
+import { server } from '../../config'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {fas} from '@fortawesome/free-solid-svg-icons'
 import {  Button, Card, CardBody, CardTitle,  CardText, Row, Col,  ListGroupItem,
   ListGroup, } from "reactstrap";
-
-
+  
 
 
 library.add(fas);
 
-export default function PostPage({
-  frontmatter: { nome, dataCompra, repetir, periodo, itens, date },
-  slug,
-}) {
+export default function ListPage(lista) {
+  console.log(lista)
   return (
     <div className="container">
     
@@ -37,7 +32,7 @@ export default function PostPage({
                 </div>
                 <Col className="col-auto">
                 <CardText className="list-text text-uppercase mb-0">
-                {nome}
+                {lista.nome}
                   </CardText>
                 </Col>
               </Row>
@@ -49,7 +44,7 @@ export default function PostPage({
                 </div>
                 <Col className="col-auto">
                 <CardText className="list-text text-uppercase mb-0">
-                    {dataCompra}
+                    {lista.dataCompra}
                   </CardText>
                 </Col>
               </Row>
@@ -61,11 +56,11 @@ export default function PostPage({
                 </div>
                 <Col className="col-auto">
                 <CardText className="list-text text-uppercase mb-0">
-                {repetir ? <FontAwesomeIcon icon="check" color='green'/>: <FontAwesomeIcon icon="times" color='red'/>}
+                {lista.repetir ? <FontAwesomeIcon icon="check" color='green'/>: <FontAwesomeIcon icon="times" color='red'/>}
                   </CardText>
                 </Col>
               </Row>
-              {repetir?  <Row>
+              {lista.repetir?  <Row>
                 <div className="col">
                   <CardTitle className="list-title text-uppercase mb-0">
                   Período: 
@@ -73,7 +68,7 @@ export default function PostPage({
                 </div>
                 <Col className="col-auto">
                 <CardText className="list-text text-uppercase mb-0">
-                {periodo}
+                {lista.periodo}
                   </CardText>
                 </Col>
               </Row> :''}
@@ -85,7 +80,7 @@ export default function PostPage({
         <Col md="6">
           <Card>
             <ListGroup flush>
-            {itens.map(( item) => (
+            {lista.itens.map(item => (
               <ListGroupItem>    
                  <Row>
                 <div className="col">
@@ -140,33 +135,30 @@ export default function PostPage({
   )
 }
 
-export async function getStaticPaths() {
-  const files = fs.readdirSync(path.join('lists'))
-
-  const paths = files.map((filename) => ({
-    params: {
-      slug: filename.replace('.md', ''),
-    },
-  }))
-
-  return {
-    paths,
-    fallback: false,
+export async function getStaticPaths(){
+  // get all the paths for your posts from an API
+  // or file system
+  const results = await fetch(`${server}/lists`)
+  const lists = await results.json()
+  const paths = lists.map(list => ({params: {id: list.id.toString()}}))
+  /*
+  [
+    {params: {slug: 'get-started-with-node'}},
+    {params: {slug: 'top-frameworks'}}
+  ]
+  */
+  return {paths, 
+    fallback: true 
   }
 }
 
-export async function getStaticProps({ params: { slug } }) {
-  const markdownWithMeta = fs.readFileSync(
-    path.join('lists', slug + '.md'),
-    'utf-8'
-  )
-
-  const { data: frontmatter } = matter(markdownWithMeta)
-
+export async function getStaticProps({ params }) {
+  const res = await fetch(`${server}/lists/${params.id.toString()}`)
+  const url = `${server}/lists/${params.id}`
+  console.log(url)
+  const lista = await res.json()
+ console.log(lista)
   return {
-    props: {
-      frontmatter,
-      slug,
-    },
+    props: lista
   }
 }

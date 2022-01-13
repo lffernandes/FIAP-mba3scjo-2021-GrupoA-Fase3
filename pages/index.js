@@ -1,6 +1,3 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
 import Head from 'next/head';
 import List from '../components/List';
 import styled from 'styled-components';
@@ -38,28 +35,41 @@ export default function Home({ lists }) {
 
 export async function getStaticProps() {
 
-  const files = fs.readdirSync(path.join('lists'))
-
-  const lists = files.map((filename) => {
-
-    const slug = filename.replace('.md', '')
-
-    const markdownWithMeta = fs.readFileSync(
-      path.join('lists', filename),
-      'utf-8'
-    )
+  const res = await fetch('http://localhost:3004/lists')
+  const listas = await res.json(() => {
+    const markdownWithMeta = listas.itens
 
     const { data:frontmatter } = matter(markdownWithMeta)
-
-    return {
-      slug,
-      frontmatter
-    }
+return {
+  frontmatter
+}
   })
+ 
   return {
     props: {
-      lists: lists.sort(function(a,b) {return Number(new Date(a.dataCompra)) - Number(new Date(b.dataCompra));
+      lists: listas.sort(function(a,b) {return Number(new Date(a.dataCompra)) - Number(new Date(b.dataCompra));
       })
     },
   }
 }
+
+// export async function getStaticPaths() {
+//   const idList = await fetchAllIds();
+//   const paths = [
+//   ];
+//   idList.forEach((id) => {paths.push(`/gunluk/${id}`)})
+//   return { paths, fallback: true };
+// }
+
+// export async function getStaticProps({ params }) {
+//   const { slug } = params;
+
+//  try {
+//     const data= await fetchGunluk(slug);
+//     return data? { props: { data} } : { notFound: true };
+//   } catch (error) {
+//     console.error(error);
+//     return { notFound: true };
+//   }
+
+// }

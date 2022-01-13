@@ -7,6 +7,7 @@ import {  Button, Card, CardBody, CardTitle,CardText, Row, Col } from "reactstra
 library.add(fas);
 
 export default function List ({ list }) {
+  console.log(list)
     return (
         <Row className="mb-4">
         <Col lg="12">
@@ -20,7 +21,7 @@ export default function List ({ list }) {
                 </div>
                 <Col className="col-auto">
                 <CardText className="list-text text-uppercase mb-0">
-                {list.frontmatter.nome}
+                {list.nome}
                   </CardText>
                 </Col>
               </Row>
@@ -32,7 +33,7 @@ export default function List ({ list }) {
                 </div>
                 <Col className="col-auto">
                 <CardText className="list-text text-uppercase mb-0">
-                    {list.frontmatter.dataCompra}
+                    {list.dataCompra}
                   </CardText>
                 </Col>
               </Row>
@@ -44,11 +45,11 @@ export default function List ({ list }) {
                 </div>
                 <Col className="col-auto">
                 <CardText className="list-text text-uppercase mb-0">
-                {list.frontmatter.repetir ? <FontAwesomeIcon icon="check" color='green'/>: <FontAwesomeIcon icon="times" color='red'/>}
+                {list.repetir ? <FontAwesomeIcon icon="check" color='green'/>: <FontAwesomeIcon icon="times" color='red'/>}
                   </CardText>
                 </Col>
               </Row>
-              {list.frontmatter.repetir ?  <Row>
+              {list.repetir ?  <Row>
                 <div className="col">
                   <CardTitle className="list-title text-uppercase mb-0">
                   Período: 
@@ -56,7 +57,7 @@ export default function List ({ list }) {
                 </div>
                 <Col className="col-auto">
                 <CardText className="list-text text-uppercase mb-0">
-                {list.frontmatter.periodo }
+                {list.periodo }
                   </CardText>
                 </Col>
               </Row> :''}
@@ -67,10 +68,10 @@ export default function List ({ list }) {
                   </CardTitle>
                 </div>
                 <Col className="col-auto">
-                {list.frontmatter.total != null || list.frontmatter.total == 0 ? 
+                {list.total != null || list.total == 0 ? 
                 
                 <CardText className="list-text text-uppercase mb-0">
-                R$&nbsp;{parseFloat(list.frontmatter.total).toFixed(2).replace('.',',')}
+                R$&nbsp;{parseFloat(list.total).toFixed(2).replace('.',',')}
                   </CardText> :
                   <CardText className="list-desativado text-uppercase mb-0">
                     Não previsto
@@ -78,7 +79,7 @@ export default function List ({ list }) {
                 </Col>
               </Row> 
             </CardBody>
-            <Link href={`/list/${list.slug}`}> 
+            <Link href={`/list/${list.id}`}> 
               <Button className="mb-3 text-uppercase" color="primary" type="button">
                 Detalhe <FontAwesomeIcon icon="arrow-right"/>
               </Button>
