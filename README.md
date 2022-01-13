@@ -57,6 +57,24 @@ $ npm run dev
 
 ```
 
+#### Caso tenha algum problema com a API é possivel rodar localmente da seguinte forma:
+
+```bash
+
+# Instale JSON Server
+$ npm install -g json-server
+
+
+# Acesse a pasta do arquivo json
+$ cd FIAP-mba3scjo-2021-GrupoA-Fase3-master\listou_2.0\data
+
+# Execute o Json Server
+$ json-server --watch db.json --port 3004
+
+# A API será aberta na porta:3004 - acesse https://localhost:3004/lists
+
+```
+
 ---
 
 ## 🦸 Autores
