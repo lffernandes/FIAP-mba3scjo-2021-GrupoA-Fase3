@@ -6,11 +6,9 @@
 
 ## 💻 Sobre o projeto
 
-🍀 A primeira etapa consiste em revistar o protótipo da fase 1 e implementar 01 (uma) ou 02 (duas) telas estáticas usando ReactJS e NodeJS. A ideia inicial era que o protótipo atendesse os cenários web e app ao mesmo tempo. Em caso de não aderência do protótipo ao uso do ReactJS, a aplicação pode ser desenvolvida livremente ou com base em outro protótipo.
+🍀 A terceira etapa consiste em adaptar a aplicação React, desenvolvida na etapa 1, para consumir os web services desenvolvidos em Spring. O projeto deve ser versionado e, em seguida, modificado para consumir os serviços recém-implementados usando os protocolos REST ou SOAP.
 
- 
-
-Entregáveis primeira etapa: fazer o upload de todos os códigos-fonte no repositório GitHub e compartilhar o endereço com o tutor. Durante a fase serão disponibilizados mais detalhes técnicos sobre o desafio.🏆
+Entregáveis terceira etapa: fazer o upload de todos os códigos-fonte no repositório GitHub e compartilhar o endereço com o tutor.🏆
 
 ---
 
@@ -42,6 +40,12 @@ $ git clone git@github.com/lffernandes/FIAP-mba3scjo-2021-GrupoA-Fase3
 
 # Acesse a pasta do projeto no seu terminal/cmd
 $ cd FIAP-mba3scjo-2021-GrupoA-Fase3-master
+
+# Troque para a branch da versão 2.0 
+$ git checkout listou-2.0
+
+#Atualize o seu repositorio local de acordo com o remoto
+$ git pull
 
 # Instale as dependências
 $ npm install
