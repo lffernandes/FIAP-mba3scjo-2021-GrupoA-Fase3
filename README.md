@@ -43,6 +43,12 @@ $ git clone git@github.com/lffernandes/FIAP-mba3scjo-2021-GrupoA-Fase3
 # Acesse a pasta do projeto no seu terminal/cmd
 $ cd FIAP-mba3scjo-2021-GrupoA-Fase3-master
 
+# Troque para a branch da versão 1.0 
+$ git checkout listou-1.0
+
+#Atualize o seu repositorio local de acordo com o remoto
+$ git pull
+
 # Instale as dependências
 $ npm install
 
