@@ -32,28 +32,9 @@ Antes de começar, você precisa ter instalado em sua máquina as seguintes ferr
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
 
-#### 🧭 Rodando a aplicação 
-
-```bash
-
-# Clone este repositório
-$ git clone git@github.com/lffernandes/FIAP-mba3scjo-2021-GrupoA-Fase3
-
-
-# Acesse a pasta do projeto no seu terminal/cmd
-$ cd FIAP-mba3scjo-2021-GrupoA-Fase3-master
-
-# Instale as dependências
-$ npm install
-
-# Execute a aplicação 
-$ npm run dev
-
-# A aplicação será aberta na porta:3000- acesse https://localhost:3000
-
-```
-
----
+Temos as seguintes branches:
+* Listou_1.0  - Código Entregáveis primeira etapa.
+* Listou_2.0 - Código Entregáveis terceira etapa.
 
 ## 🦸 Autores
 
